@@ -33,5 +33,10 @@ export type Capability = {
 export type Device = {
     sku: string;
     device: string;
-    capabilities: Capability[];
+    capabilities?: Capability[];
+}
+
+export type DeviceCardProps = {
+    device: Device;
+    onToggle: (id: string) => void;
 }
